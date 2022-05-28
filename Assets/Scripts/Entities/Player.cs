@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
 
     GameManager gameManager;
+    public bool isPlayerCanShoot = true;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log("fail");
             gameManager.GameFail();
+            isPlayerCanShoot = false;
         }
         else if (other.gameObject.CompareTag("LandingArea"))
         {

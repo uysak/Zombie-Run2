@@ -18,7 +18,7 @@ public class EnemyMovementManager : MonoBehaviour
     private void Update()
     {
         foreach(GameObject enemy in _Enemies){
-            StartCoroutine(MoveEnemy(enemy));
+            enemy.GetComponent<Enemy>().Follow(this.gameObject);
 
 
 
@@ -29,12 +29,6 @@ public class EnemyMovementManager : MonoBehaviour
             //}
         }
         
-    }
-
-    IEnumerator MoveEnemy(GameObject enemy)
-    {
-        enemy.GetComponent<Enemy>().Follow(this.gameObject);
-        yield return new WaitForSeconds(1f);
     }
     public void AddEnemy(GameObject Enemy)
     {

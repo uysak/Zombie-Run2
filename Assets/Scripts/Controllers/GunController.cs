@@ -9,6 +9,7 @@ public class GunController : MonoBehaviour
     
     [SerializeField] GameObject Player;
 
+    private Player playerScript;
     EnemyDetectController enemyDetectController;
 
     AudioManager audioManager;
@@ -27,6 +28,7 @@ public class GunController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         enemyDetectController = Player.GetComponent<EnemyDetectController>();
         audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
     }
@@ -74,7 +76,7 @@ public class GunController : MonoBehaviour
 
     private void GunShot()
     {
-        if(enemyDetectController.getTargetPos() != null && enemyDetectController.getIsEnemyDetect() == true)
+        if( (  enemyDetectController.getTargetPos() != null && enemyDetectController.getIsEnemyDetect() == true ) && playerScript.isPlayerCanShoot == true)
         {
             audioManager.GunShoot(audioSource);
             Vector3 target = new Vector3(this.transform.position.x + 6.1f, this.transform.position.y + 1.9674f,  this.transform.position.z - 21.6f);

@@ -911,6 +911,7 @@ GameObject:
   - component: {fileID: 4233349226702775143}
   - component: {fileID: 4233349226702775138}
   - component: {fileID: 130857295}
+  - component: {fileID: 1817179717}
   m_Layer: 0
   m_Name: warzombie_f_pedroso
   m_TagString: Enemy
@@ -994,6 +995,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.99216384, y: 2.6126583, z: 0.9376297}
   m_Center: {x: 0.031596225, y: 1.4591225, z: -0.11857636}
+--- !u!65 &1817179717
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3926726973338295848}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1470567, y: 1.9714532, z: 1.16337}
+  m_Center: {x: 0.045837086, y: 1.0912642, z: -0.13625658}
 --- !u!1 &3997391228183266681
 GameObject:
   m_ObjectHideFlags: 0

@@ -41,10 +41,12 @@ public class RescueAreaManager : MonoBehaviour
         _Soldiers.Add(Soldier);
     }
 
-    -0.576  2.02 -2.073  -33.257
     public void OpenRescueGate()
     {
         Gate.transform.rotation = Quaternion.Lerp(Gate.transform.rotation, Quaternion.Euler(0, -90, 0), 2 * Time.deltaTime);
         audioSource.Play();
     }
 }
+
+// 0.252  1.775 -1.169
+// 6.101  3.207 -0.516
